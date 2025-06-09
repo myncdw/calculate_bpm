@@ -1,0 +1,39 @@
+BoxLayout:
+    orientation: 'vertical'
+    spacing: 15
+    padding: 20
+
+    Label:
+        text: "当前bpm是"
+		font_name: "DefaultFont"
+        font_size: '32sp'
+        color: 1, 1, 1, 1
+        size_hint_y: None
+        height: self.texture_size[1]
+
+    Label:
+        id: output_bpm
+        text: "0"
+		font_name: "DefaultFont"
+        font_size: "32sp"
+        color: 1, 1, 1, 1
+        size_hint_y: None
+        height: self.texture_size[1]
+
+    Widget:
+        size_hint_y: None
+        height: 250
+
+    Button:
+        id: btn_click
+        text: "BPM"
+		font_name: "DefaultFont"
+        font_size: '24sp'
+        size_hint_y: None
+        height: 50
+        background_color: 0, 1, 0, 1
+        on_press: app.on_button_press(self)
+
+	Widget:
+        size_hint_y: None
+        height: 50
